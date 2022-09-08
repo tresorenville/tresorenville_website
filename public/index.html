@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -12,9 +13,31 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Trésor en ville</title>
+
+    <!-- Swetrics analytics -- Put this at the end of the <head> tag -->
+    <script src="https://swetrix.org/swetrix.js" defer></script>
+    <!-- Swetrics analytics -- End -->
   </head>
+
   <body>
     <noscript>Activez le JavaScript pour naviguer sur le site. You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+  <!-- Swetrics analytics -- Put this at the end of the <body> tag -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      swetrix.init('%REACT_APP_TEV_SWETRIX_ANALYTICS_PID%')
+      swetrix.trackViews()
+    })
+  </script>
+  <noscript>
+    <img
+      src="https://api.swetrix.com/log/noscript?pid=%REACT_APP_TEV_SWETRIX_ANALYTICS_PID%"
+      alt=""
+      referrerpolicy="no-referrer-when-downgrade"
+    />
+  </noscript>
+  <!-- Swetrics analytics -- End -->
   </body>
+
 </html>
