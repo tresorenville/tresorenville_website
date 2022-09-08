@@ -1,4 +1,5 @@
 import githubMark from './GitHub-Mark.png'
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -8,10 +9,18 @@ function Header() {
         <nav className="md:ml-auto">
           <ul className="flex justify-around mt-2 md:mt-0 md:space-x-6">
             <li>
-              <a href="/" className="p-2 rounded-md hover:text-white bg-gradient-to-r hover:from-gray-100 hover:to-gray-400">Accueil</a>
+              <NavLink to="/"
+                className={({ isActive }) => {
+                  if (isActive) return "p-2 rounded-md text-white bg-gray-500"
+                  else return "p-2 rounded-md hover:text-white hover:bg-gray-500"
+              }}>Accueil</NavLink>
             </li>
             <li>
-              <a href="/" className="p-2 rounded-md hover:text-white bg-gradient-to-r hover:from-gray-100 hover:to-gray-400">À propos</a>
+              <NavLink to="/"
+                className={({ isActive }) => {
+                  if (isActive) return "p-2 rounded-md text-white bg-gray-500"
+                  else return "p-2 rounded-md hover:text-white hover:bg-gray-500"
+              }}>À propos</NavLink>
             </li>
           </ul>
         </nav>
