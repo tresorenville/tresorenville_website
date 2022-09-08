@@ -26,7 +26,7 @@
   <!-- Swetrics analytics -- Put this at the end of the <body> tag -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      swetrix.init('%REACT_APP_TEV_SWETRIX_ANALYTICS_PID%')
+      swetrix.init(process.env.REACT_APP_TEV_SWETRIX_ANALYTICS_PID)
       swetrix.trackViews()
     })
   </script>
