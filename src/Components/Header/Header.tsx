@@ -16,7 +16,7 @@ function Header() {
               }}>Accueil</NavLink>
             </li>
             <li>
-              <NavLink to="/"
+              <NavLink to="/about"
                 className={({ isActive }) => {
                   if (isActive) return "p-2 rounded-md text-white bg-gray-500"
                   else return "p-2 rounded-md hover:text-white hover:bg-gray-500"
