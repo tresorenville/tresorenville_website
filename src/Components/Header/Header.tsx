@@ -1,3 +1,5 @@
+import logo_lantern_day from './logo/day/lantern.svg'
+import logo_title_day from './logo/day/text.svg'
 import githubMark from './GitHub-Mark.png'
 import { NavLink } from "react-router-dom";
 
@@ -5,7 +7,8 @@ function Header() {
   return (
     <header className="p-2 border-b border-gray-200 shadow-sm">
       <div className="flex  flex-col md:flex-row md:items-center">
-        <p className="text-center text-2xl font-bold ml-4 py-2">Trésor en ville</p>
+        <img className="inline-block h-16 mb-1 ml-2" src={logo_lantern_day} alt="Tresor en ville Lantern" />
+        <img className="inline-block h-10 ml-4" src={logo_title_day} alt="Tresor en ville Title" />
         <nav className="md:ml-auto">
           <ul className="flex justify-around mt-2 md:mt-0 md:space-x-6">
             <li>
