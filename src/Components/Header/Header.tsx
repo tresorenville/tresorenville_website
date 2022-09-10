@@ -1,6 +1,7 @@
-import logo_day_lantern from './logo/day/lantern.svg'
 import logo_day_title_first_part from './logo/day/text_first_part.svg'
 import logo_day_title_second_part from './logo/day/text_second_part.svg'
+import logo_night_title_first_part from './logo/night/text_first_part.svg'
+import logo_night_title_second_part from './logo/night/text_second_part.svg'
 import logo_night_lantern from './logo/night/lantern.svg'
 import githubMark from './GitHub-Mark.png'
 import { NavLink } from "react-router-dom";
@@ -31,8 +32,8 @@ function Header() {
             onClick={() => onSelectMode(mode === 'dark' ? 'light' : 'dark')} />
           </div>
           <div className="flex flex-col sm:flex-row items-start">
-            <img className="inline-block h-9 md:h-12 ml-2 md:ml-4 sm:mt-2" src={logo_day_title_first_part} alt="Tresor en ville Title part 1" />
-            <img className="inline-block h-9 md:h-12 ml-4 sm:ml-3 sm:mt-2" src={logo_day_title_second_part} alt="Tresor en ville Title part 2" />
+            <img className="inline-block h-9 md:h-12 ml-2 md:ml-4 sm:mt-2" src={mode === 'dark' ? logo_night_title_first_part : logo_day_title_first_part} alt="Tresor en ville Title part 1" />
+            <img className="inline-block h-9 md:h-12 ml-4 sm:ml-3 sm:mt-2" src={mode === 'dark' ? logo_night_title_second_part : logo_day_title_second_part} alt="Tresor en ville Title part 2" />
           </div>
         </div>
         <nav className="">
