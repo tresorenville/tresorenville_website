@@ -9,10 +9,10 @@ function Header() {
     <header className="p-2 border-b border-gray-200 shadow-sm">
       <div className="flex flex-col items-center">
         <div className="flex flex-row items-center mb-6">
-          <img className="inline-block h-20 md:h-28 ml-2" src={logo_day_lantern} alt="Tresor en ville Lantern" />
+          <img className="inline-block h-20 md:h-24 ml-2" src={logo_day_lantern} alt="Tresor en ville Lantern" />
           <div className="flex flex-col sm:flex-row items-start">
-            <img className="inline-block h-9 md:h-14 ml-4 md:ml-8 sm:mt-6" src={logo_day_title_first_part} alt="Tresor en ville Title part 1" />
-            <img className="inline-block h-9 md:h-14 ml-6 sm:ml-3 sm:mt-6" src={logo_day_title_second_part} alt="Tresor en ville Title part 2" />
+            <img className="inline-block h-9 md:h-12 ml-4 md:ml-8 sm:mt-6" src={logo_day_title_first_part} alt="Tresor en ville Title part 1" />
+            <img className="inline-block h-9 md:h-12 ml-6 sm:ml-3 sm:mt-6" src={logo_day_title_second_part} alt="Tresor en ville Title part 2" />
           </div>
         </div>
         <nav className="">
