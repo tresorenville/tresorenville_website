@@ -27,14 +27,8 @@ function Header() {
       <div className="flex flex-col items-center">
         <div className="flex flex-row items-center mb-6">
           <div className="icons">
-            {
-              mode === 'dark' ?
-                <img className="inline-block h-20 md:h-28 ml-2 hover:animate-wiggle" src={logo_night_lantern} alt="Tresor en ville Lantern"
-                onClick={() => onSelectMode('light')} />
-              :
-                <img className="inline-block h-20 md:h-28 ml-2 hover:animate-wiggle" src={logo_night_lantern} alt="Tresor en ville Lantern"
-                  onClick={() => onSelectMode('dark')} />
-            }
+            <img className="inline-block h-20 md:h-28 ml-2 hover:animate-wiggle" src={logo_night_lantern} alt="Tresor en ville Lantern"
+            onClick={() => onSelectMode(mode === 'dark' ? 'light' : 'dark')} />
           </div>
           <div className="flex flex-col sm:flex-row items-start">
             <img className="inline-block h-9 md:h-12 ml-2 md:ml-4 sm:mt-2" src={logo_day_title_first_part} alt="Tresor en ville Title part 1" />
