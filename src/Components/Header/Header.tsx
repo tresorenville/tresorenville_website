@@ -1,15 +1,41 @@
 import logo_day_lantern from './logo/day/lantern.svg'
 import logo_day_title_first_part from './logo/day/text_first_part.svg'
 import logo_day_title_second_part from './logo/day/text_second_part.svg'
+import logo_night_lantern from './logo/night/lantern.svg'
 import githubMark from './GitHub-Mark.png'
 import { NavLink } from "react-router-dom";
+import {SetStateAction, useState} from "react";
 
 function Header() {
+  // hook for dark mode:
+  const [mode, setMode] = useState('light')
+
+  const onSelectMode = (mode: SetStateAction<string>) => {
+    setMode(mode)
+    if (mode === 'dark') {
+      document.body.classList.add('dark-mode')
+      console.log('in dark mode')
+    }
+    else {
+      document.body.classList.remove('dark-mode')
+      console.log('in light mode')
+    }
+  }
+
   return (
     <header className="p-2 pb-4 border-b border-gray-200 shadow-sm">
       <div className="flex flex-col items-center">
         <div className="flex flex-row items-center mb-6">
-          <img className="inline-block h-20 md:h-24 ml-2 hover:animate-wiggle" src={logo_day_lantern} alt="Tresor en ville Lantern" />
+          <div className={'icons'}>
+            {
+              mode === 'dark' ?
+                <img className="inline-block h-20 md:h-24 ml-2 hover:animate-wiggle" src={logo_day_lantern} alt="Tresor en ville Lantern day"
+                onClick={() => onSelectMode('light')} />
+              :
+                <img className="inline-block h-20 md:h-28 ml-2 hover:animate-wiggle" src={logo_night_lantern} alt="Tresor en ville Lantern night"
+                  onClick={() => onSelectMode('dark')} />
+            }
+          </div>
           <div className="flex flex-col sm:flex-row items-start">
             <img className="inline-block h-9 md:h-12 ml-4 md:ml-8 sm:mt-6" src={logo_day_title_first_part} alt="Tresor en ville Title part 1" />
             <img className="inline-block h-9 md:h-12 ml-6 sm:ml-3 sm:mt-6" src={logo_day_title_second_part} alt="Tresor en ville Title part 2" />
