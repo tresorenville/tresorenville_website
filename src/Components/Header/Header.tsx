@@ -26,7 +26,7 @@ function Header() {
     <header className="p-2 pb-4 border-b border-gray-200 shadow-sm">
       <div className="flex flex-col items-center">
         <div className="flex flex-row items-center mb-6">
-          <div className={'icons'}>
+          <div className="icons">
             {
               mode === 'dark' ?
                 <img className="inline-block h-20 md:h-24 ml-2 hover:animate-wiggle" src={logo_day_lantern} alt="Tresor en ville Lantern day"
