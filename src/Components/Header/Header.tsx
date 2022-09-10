@@ -37,8 +37,8 @@ function Header() {
             }
           </div>
           <div className="flex flex-col sm:flex-row items-start">
-            <img className="inline-block h-9 md:h-12 ml-2 md:ml-4 sm:mt-4" src={logo_day_title_first_part} alt="Tresor en ville Title part 1" />
-            <img className="inline-block h-9 md:h-12 ml-4 sm:ml-3 sm:mt-4" src={logo_day_title_second_part} alt="Tresor en ville Title part 2" />
+            <img className="inline-block h-9 md:h-12 ml-2 md:ml-4 sm:mt-2" src={logo_day_title_first_part} alt="Tresor en ville Title part 1" />
+            <img className="inline-block h-9 md:h-12 ml-4 sm:ml-3 sm:mt-2" src={logo_day_title_second_part} alt="Tresor en ville Title part 2" />
           </div>
         </div>
         <nav className="">
