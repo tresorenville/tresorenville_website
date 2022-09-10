@@ -29,10 +29,10 @@ function Header() {
           <div className="icons">
             {
               mode === 'dark' ?
-                <img className="inline-block h-20 md:h-24 ml-2 hover:animate-wiggle" src={logo_night_lantern} alt="Tresor en ville Lantern day"
+                <img className="inline-block h-20 md:h-28 ml-2 hover:animate-wiggle" src={logo_night_lantern} alt="Tresor en ville Lantern"
                 onClick={() => onSelectMode('light')} />
               :
-                <img className="inline-block h-20 md:h-28 ml-2 hover:animate-wiggle" src={logo_day_lantern} alt="Tresor en ville Lantern night"
+                <img className="inline-block h-20 md:h-28 ml-2 hover:animate-wiggle" src={logo_night_lantern} alt="Tresor en ville Lantern"
                   onClick={() => onSelectMode('dark')} />
             }
           </div>
