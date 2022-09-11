@@ -16,7 +16,7 @@ function Header() {
           </div>
         </div>
         <nav className="">
-          <ul className="flex justify-around space-x-6">
+          <ul className="flex justify-around space-x-2 sm:space-x-6">
             <li>
               <NavLink to="/"
                 className={({ isActive }) => {
@@ -25,7 +25,7 @@ function Header() {
               }}>Accueil</NavLink>
             </li>
             <li>
-              <div className="border-l border-gray-200 block pl-6">
+              <div className="border-l border-gray-200 block pl-2 sm:pl-6">
                 <NavLink to="/about"
                   className={({ isActive }) => {
                     if (isActive) return "p-2 underline underline-offset-2 text-gray-500"
