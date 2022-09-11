@@ -10,7 +10,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className="bg-paper-texture dark:bg-night-blue-200 dark:text-white">
+    <div className="bg-paper-texture-img dark:bg-transparent-img dark:bg-night-blue-200 dark:text-white">
       <BrowserRouter>
         <Header />
         <Routes>

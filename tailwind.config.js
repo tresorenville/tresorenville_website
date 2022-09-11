@@ -39,7 +39,8 @@ module.exports = {
         wiggle: 'wiggle 1s ease-in-out',
       },
       backgroundImage: {
-        'paper-texture': "url('../public/bg_texture.png')"
+        'paper-texture-img': "url('../public/bg_texture.png')",
+        'transparent-img': "url('../public/bg_texture_transparent.png')"
       }
     },
   },
