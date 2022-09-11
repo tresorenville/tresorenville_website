@@ -37,7 +37,15 @@ module.exports = {
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out',
+      },
+      backgroundImage: {
+        'paper-texture': "url('../public/bg_texture.png')"
       }
+    },
+  },
+  variants: {
+    extend: {
+      backgroundImage: ["dark"],
     },
   },
   plugins: [],
