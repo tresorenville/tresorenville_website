@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="p-2 pb-4 border-b border-gray-200 shadow-sm">
+    <header className="p-2 pb-4 dark:border-b border-gray-200 shadow-sm">
       <div className="flex flex-col items-center">
         <div className="flex flex-row items-center mb-6">
           <img className="inline-block h-20 md:h-24 ml-2" src={logo_day_lantern} alt="Tresor en ville Lantern" />
