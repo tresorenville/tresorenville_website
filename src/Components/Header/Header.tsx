@@ -52,7 +52,7 @@ function Header() {
               <NavLink to="/"
                 className={({ isActive }) => {
                   if (isActive) return "p-2 underline underline-offset-2 text-gray-500 dark:text-lantern-yellow-500"
-                  else return "p-2 hover:underline underline-offset-2 hover:text-gray-500 hover:dark:text-lantern-yellow-500"
+                  else return "p-2 hover:underline underline-offset-2 hover:text-gray-500 dark:hover:text-lantern-yellow-500"
               }}>Accueil</NavLink>
             </li>
             <li>
@@ -60,7 +60,7 @@ function Header() {
                 <NavLink to="/about"
                   className={({ isActive }) => {
                     if (isActive) return "p-2 underline underline-offset-2 text-gray-500 dark:text-lantern-yellow-500"
-                    else return "p-2 hover:underline underline-offset-2 hover:text-gray-500 hover:dark:text-lantern-yellow-500"
+                    else return "p-2 hover:underline underline-offset-2 hover:text-gray-500 dark:hover:text-lantern-yellow-500"
                 }}>À propos</NavLink>
               </div>
             </li>
