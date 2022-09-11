@@ -14,6 +14,15 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Trésor en ville</title>
 
+    <!-- Dark mode - get user preferences -->
+    <script>
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+      } else {
+          document.documentElement.classList.remove('dark')
+      }
+    </script>
+
     <!-- Swetrics analytics -- Put this at the end of the <head> tag -->
     <script src="https://swetrix.org/swetrix.js" defer></script>
     <!-- Swetrics analytics -- End -->

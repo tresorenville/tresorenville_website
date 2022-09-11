@@ -5,35 +5,44 @@ import logo_night_title_second_part from './logo/night/text_second_part.svg'
 import logo_night_lantern from './logo/night/lantern.svg'
 import githubMark from './GitHub-Mark.png'
 import { NavLink } from "react-router-dom";
-import {SetStateAction, useState} from "react";
 
 function Header() {
-  // hook for dark mode:
-  const [mode, setMode] = useState('light')
-
-  const onSelectMode = (mode: SetStateAction<string>) => {
-    setMode(mode)
-    if (mode === 'dark') {
-      document.body.classList.add('dark-mode')
-      console.log('in dark mode')
+  // Dark mode switch
+  const themeSwitch = () => {
+    // if set via local storage previously
+    if (localStorage.getItem('theme')) {
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+    // if NOT set via local storage previously
+    } else {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
     }
-    else {
-      document.body.classList.remove('dark-mode')
-      console.log('in light mode')
-    }
-  }
+  };
 
   return (
     <header className="p-2 pb-4 border-b border-gray-200 shadow-sm">
       <div className="flex flex-col items-center">
         <div className="flex flex-row items-center mb-6">
           <div className="icons">
-            <img className="inline-block h-20 md:h-28 ml-2 hover:animate-wiggle" src={logo_night_lantern} alt="Tresor en ville Lantern"
-            onClick={() => onSelectMode(mode === 'dark' ? 'light' : 'dark')} />
+            <img className="inline-block h-20 md:h-28 ml-2 hover:animate-wiggle" src={logo_night_lantern} alt="logo-lantern"
+            onClick={() => themeSwitch()} />
           </div>
           <div className="flex flex-col sm:flex-row items-start">
-            <img className="inline-block h-9 md:h-12 ml-2 md:ml-4 sm:mt-2" src={mode === 'dark' ? logo_night_title_first_part : logo_day_title_first_part} alt="Tresor en ville Title part 1" />
-            <img className="inline-block h-9 md:h-12 ml-4 sm:ml-3 sm:mt-2" src={mode === 'dark' ? logo_night_title_second_part : logo_day_title_second_part} alt="Tresor en ville Title part 2" />
+            <img className="inline-block dark:hidden h-9 md:h-12 ml-2 md:ml-4 sm:mt-2" src={logo_day_title_first_part} alt="logo-title-day-part1" />
+            <img className="hidden dark:inline-block h-9 md:h-12 ml-2 md:ml-4 sm:mt-2" src={logo_night_title_first_part} alt="logo-title-night-part1" />
+            <img className="inline-block dark:hidden h-9 md:h-12 ml-4 sm:ml-3 sm:mt-2" src={logo_day_title_second_part} alt="logo-title-day-part2" />
+            <img className="hidden dark:inline-block h-9 md:h-12 ml-4 sm:ml-3 sm:mt-2" src={logo_night_title_second_part} alt="logo-title-night-part2" />
           </div>
         </div>
         <nav className="">

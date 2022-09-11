@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.dark-mode {
-  background-color: #141d2e;
-  color: #ffffff;
-}
-
 .icons {
   cursor: pointer;
 }
