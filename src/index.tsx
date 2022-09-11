@@ -10,7 +10,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/bg_texture.png'})` }}>
+    <div className="dark:bg-night-blue-200 dark:text-white" style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/bg_texture.png'})` }}>
       <BrowserRouter>
         <Header />
         <Routes>

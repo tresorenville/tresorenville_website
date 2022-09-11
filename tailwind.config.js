@@ -4,6 +4,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     colors: {
       transparent: 'transparent',
@@ -11,20 +12,33 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       gray: colors.gray,
-      'yellow': {
-        50:  '#fefce8',
-        100: '#fef9c3',
-        200: '#fef08a',
-        300: '#fde047',
-        400: '#facc15',
-        500: '#eab308',
-        600: '#ca8a04',
-        700: '#a16207',
-        800: '#854d0e',
-        900: '#713f12',
+      'night-blue': {
+        50:  '#2e4c76',
+        100: '#1f2937',
+        200: '#141d2e',
+      },
+      'lantern-yellow': {
+        50:  '#fffefc',
+        100: '#fff4cf',
+        200: '#ffe6a3',
+        300: '#ffcf51',
+        400: '#fac82f',
+        500: '#d9a523',
+        600: '#b39144',
+        700: '#928455',
       },
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        wiggle: {
+          '25%, 75%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out',
+      }
+    },
   },
   plugins: [],
 }
