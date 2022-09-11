@@ -3,7 +3,8 @@ import logo_day_title_second_part from './logo/day/text_second_part.svg'
 import logo_night_title_first_part from './logo/night/text_first_part.svg'
 import logo_night_title_second_part from './logo/night/text_second_part.svg'
 import logo_night_lantern from './logo/night/lantern.svg'
-import githubMark from './GitHub-Mark.png'
+import githubMarkBlack from './github/github_mark_black.png'
+import githubMarkWhite from './github/github_mark_white.png'
 import { NavLink } from "react-router-dom";
 
 function Header() {
@@ -66,7 +67,8 @@ function Header() {
             <li>
               <div className="border-l border-gray-200 block pl-6">
                 <a href="https://github.com/tresorenville/tresorenville_website" rel="external nofollow" title="Code source sur GitHub">
-                  <img src={githubMark} alt="Github Mark" className="h-6 w-6" />
+                  <img className="dark:hidden h-6 w-6" src={githubMarkBlack} alt="github-mark-black" />
+                  <img className="hidden dark:block h-6 w-6" src={githubMarkWhite} alt="github-mark-white" />
                 </a>
               </div>
             </li>
