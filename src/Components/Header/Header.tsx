@@ -34,7 +34,7 @@ function Header() {
               </div>
             </li>
             <li>
-              <div className="border-l border-gray-200 block pl-6">
+              <div className="hidden sm:block border-l border-gray-200 pl-6">
                 <a href="https://github.com/tresorenville/tresorenville_website" rel="external nofollow" title="Code source sur GitHub">
                   <img src={githubMark} alt="Github Mark" className="h-6 w-6" />
                 </a>
