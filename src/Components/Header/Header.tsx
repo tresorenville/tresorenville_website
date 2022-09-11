@@ -50,16 +50,16 @@ function Header() {
             <li>
               <NavLink to="/"
                 className={({ isActive }) => {
-                  if (isActive) return "p-2 underline underline-offset-2 text-gray-500"
-                  else return "p-2 hover:underline underline-offset-2 hover:text-gray-500"
+                  if (isActive) return "p-2 underline underline-offset-2 text-gray-500 dark:text-lantern-yellow-500"
+                  else return "p-2 hover:underline underline-offset-2 hover:text-gray-500 hover:dark:text-lantern-yellow-500"
               }}>Accueil</NavLink>
             </li>
             <li>
               <div className="border-l border-gray-200 block pl-6">
                 <NavLink to="/about"
                   className={({ isActive }) => {
-                    if (isActive) return "p-2 underline underline-offset-2 text-gray-500"
-                    else return "p-2 hover:underline underline-offset-2 hover:text-gray-500"
+                    if (isActive) return "p-2 underline underline-offset-2 text-gray-500 dark:text-lantern-yellow-500"
+                    else return "p-2 hover:underline underline-offset-2 hover:text-gray-500 hover:dark:text-lantern-yellow-500"
                 }}>À propos</NavLink>
               </div>
             </li>
